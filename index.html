@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feliz Aniversário ❤️</title>
+
+
+<style>
+
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+body{
+
+    font-family:Arial,sans-serif;
+
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow-x:hidden;
+
+    padding:20px;
+
+}
+
+
+
+.card{
+
+    background:white;
+
+    width:100%;
+
+    max-width:800px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+
+}
+
+
+
+img{
+
+    width:100%;
+
+    max-width:500px;
+
+    height:auto;
+
+    aspect-ratio:4/3;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin:20px auto;
+
+    display:block;
+
+    transition:0.8s;
+
+}
+
+
+
+h1{
+
+    color:#ff4081;
+
+    font-size:clamp(1.6rem,5vw,2.2rem);
+
+}
+
+
+
+h2{
+
+    font-size:clamp(1.2rem,4vw,1.6rem);
+
+}
+
+
+
+p{
+
+    font-size:clamp(1rem,4vw,1.2rem);
+
+    line-height:1.6;
+
+    color:#444;
+
+}
+
+
+
+button{
+
+    margin-top:20px;
+
+    padding:15px 30px;
+
+    width:80%;
+
+    max-width:300px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ff4081;
+
+    color:white;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+audio{
+
+    width:100%;
+
+    margin-top:15px;
+
+}
+
+
+
+#historia{
+
+    display:none;
+
+}
+
+
+
+#final{
+
+    display:none;
+
+}
+
+
+
+.letra{
+
+    margin-top:30px;
+
+    padding:20px;
+
+    background:#fff0f5;
+
+    border-radius:20px;
+
+    max-height:350px;
+
+    overflow-y:auto;
+
+}
+
+
+
+.letra p{
+
+    font-size:1rem;
+
+}
+
+
+
+.coracao{
+
+    position:absolute;
+
+    color:red;
+
+    animation:cair linear infinite;
+
+    pointer-events:none;
+
+}
+
+
+
+@keyframes cair{
+
+
+from{
+
+transform:translateY(-100vh);
+
+}
+
+
+to{
+
+transform:translateY(100vh);
+
+}
+
+
+}
+
+
+
+
+/* CELULAR */
+
+@media(max-width:600px){
+
+
+body{
+
+    padding:10px;
+
+}
+
+
+.card{
+
+    padding:20px;
+
+    border-radius:20px;
+
+}
+
+
+
+img{
+
+    aspect-ratio:1/1;
+
+}
+
+
+
+button{
+
+    width:100%;
+
+}
+
+
+
+.letra{
+
+    max-height:280px;
+
+    padding:15px;
+
+}
+
+
+
+p{
+
+    font-size:1rem;
+
+}
+
+
+}
+
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="card">
+
+
+<div id="inicio">
+
+
+<h1>
+
+❤️ Feliz Aniversário ❤️
+
+</h1>
+
+
+<p>
+
+Eu preparei uma pequena viagem pelas nossas memórias.
+
+</p>
+
+
+
+<button onclick="comecar()">
+
+Começar ❤️
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div id="historia">
+
+
+<h1>
+
+Nossa História ❤️
+
+</h1>
+
+
+
+<img id="foto" src="capa.jpeg">
+
+
+
+<p id="texto">
+
+Feliz aniversário, meu amor. Eu preparei uma pequena viagem pelas nossas memórias.
+
+</p>
+
+
+
+<button onclick="proximo()">
+
+Próxima Memória ❤️
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div id="final">
+
+
+<h1>
+
+💖 Uma Última Mensagem 💖
+
+</h1>
+
+
+
+<p>
+
+
+Obrigado por todos os momentos, por todos os sorrisos e por todas as memórias que construímos juntos.
+
+
+<br><br>
+
+
+Cada foto aqui representa uma pequena parte do quanto você é importante para mim.
+
+
+<br><br>
+
+
+Espero comemorar muitos outros aniversários ao seu lado.
+
+
+<br><br>
+
+
+Feliz aniversário, meu amor ❤️
+
+
+</p>
+
+
+
+<br>
+
+
+<h2>
+
+🎵 Música feita para você 🎵
+
+</h2>
+
+
+
+<audio controls autoplay>
+
+<source src="musica.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+
+<div class="letra">
+
+
+<h2>
+
+❤️ Nossa Música ❤️
+
+</h2>
+
+
+<br>
+
+
+<p>
+
+
+Amor, pra onde você for, eu vou.
+
+
+<br><br>
+
+
+Oh, dialeto é problema?
+
+
+<br>
+
+
+Com o nosso amor vencemos o sistema.
+
+
+<br><br>
+
+
+Problema?
+
+
+<br>
+
+
+Você é mais linda que Atena,
+
+
+<br>
+
+
+Mais que uma deusa, mais que uma estrela.
+
+
+<br><br>
+
+
+Inter... interestelar é o seu olhar,
+
+
+<br>
+
+
+O seu sorriso me faz rimar.
+
+
+<br>
+
+
+Não tem explicação, eu só sei te amar,
+
+
+<br>
+
+
+Eu só sei te admirar.
+
+
+<br><br>
+
+
+Quando tudo parece desabar,
+
+
+<br>
+
+
+É sua voz que me faz levantar.
+
+
+<br>
+
+
+No meio do caos eu encontro a paz,
+
+
+<br>
+
+
+Porque ao seu lado eu sou capaz.
+
+
+<br><br>
+
+
+E se o mundo inteiro duvidar,
+
+
+<br>
+
+
+Eu vou estar aqui pra provar:
+
+
+<br>
+
+
+Que o amor que eu sinto é verdadeiro,
+
+
+<br>
+
+
+Hoje, amanhã e o ano inteiro.
+
+
+<br><br>
+
+
+❤️
+
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+const fotos=[
+
+
+"olhos.jpeg",
+
+"diadolab.jpeg",
+
+"diadomuseu.jpeg",
+
+"aniversario.jpeg",
+
+"diatodo.jpeg"
+
+
+];
+
+
+
+const mensagens=[
+
+
+"❤️ Feliz aniversário, meu amor. Eu preparei uma pequena viagem pelas nossas memórias.",
+
+
+"🧪 Este foi nosso primeiro laboratório namorando. O dia do lab sempre vai lembrar esse momento especial.",
+
+
+"🏛️ Nosso primeiro passeio namorando. O dia do museu foi um dia muito especial.",
+
+
+"🎂 O aniversário da gi foi um dia incrível. Ver você de vestido foi a  melhor parte.",
+
+
+"💕 A primeira vez que ficamos o dia todo juntos foi um dos meus dias favoritos. Passar o dia inteiro com você foi perfeito."
+
+
+];
+
+
+
+let atual=0;
+
+
+
+
+function comecar(){
+
+
+document.getElementById("inicio").style.display="none";
+
+
+document.getElementById("historia").style.display="block";
+
+
+}
+
+
+
+
+function proximo(){
+
+
+atual++;
+
+
+
+if(atual < fotos.length){
+
+
+
+let img=document.getElementById("foto");
+
+
+img.style.opacity=0;
+
+
+
+setTimeout(()=>{
+
+
+img.src=fotos[atual];
+
+
+document.getElementById("texto").innerHTML=mensagens[atual];
+
+
+img.style.opacity=1;
+
+
+},400);
+
+
+
+}else{
+
+
+document.getElementById("historia").style.display="none";
+
+
+document.getElementById("final").style.display="block";
+
+
+}
+
+
+
+}
+
+
+
+
+
+function criarCoracao(){
+
+
+let c=document.createElement("div");
+
+
+c.innerHTML="❤️";
+
+
+c.className="coracao";
+
+
+c.style.left=Math.random()*100+"vw";
+
+
+c.style.fontSize=(Math.random()*20+15)+"px";
+
+
+c.style.animationDuration=(Math.random()*5+5)+"s";
+
+
+
+document.body.appendChild(c);
+
+
+
+setTimeout(()=>{
+
+
+c.remove();
+
+
+},10000);
+
+
+}
+
+
+
+setInterval(criarCoracao,300);
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
